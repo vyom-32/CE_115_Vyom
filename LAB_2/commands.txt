@@ -1,0 +1,8 @@
+1) to generate addition.netmodule
+csc /t:module addition.cs
+
+2) to generate multiplication.netmodule
+csc /t:module multiplication.cs
+
+3) to combine previous two into Calc.dll
+al /out:Calc.dll /t:library addition.netmodule multiplication.netmodule
