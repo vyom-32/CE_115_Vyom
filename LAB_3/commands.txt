@@ -1,1 +1,17 @@
+1) to create strong named calc.dll
+sn -k mykey.snk
+csc /t:library /out:calc.dll /keyfile:mykey.snk cals.cs
+
+2) to deploy calc.dll to GAC
+gacutil -i calc.dll
+
+3)to create calc.dll v1.0.0.0 add following code to calc_v1.cs(new version of calc.cs)
+using System.Reflection;
+[assembly : AssemblyVersion("1.0.0.0")]
+
+-> to complile calc_v1.cs as calc.dll v1.0.0.0
+csc /t:library /out:calc.dll /keyfile:mykey.snk calc_v1.cs
+
+-> to deploy calc.dll v1.0.0.0 to GAC
+gacutil -i calc.dll
 

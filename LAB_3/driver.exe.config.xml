@@ -1,0 +1,13 @@
+<configuration>  
+   <runtime>  
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
+		<dependentAssembly>
+			<assemblyIdentity name="calc"
+							  publicKeyoken="9dbe5ff6f842bb50"
+							  culture="neautral" />
+			<bindingRedirect  oldVersion="0.0.0.0"
+							  newVersion="1.0.0.0"/>
+		</dependentAssembly>
+	  </assemblyBinding>  
+   </runtime>  
+</configuration>  
