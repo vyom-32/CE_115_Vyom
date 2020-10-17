@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Lab11.Models.CustomerProduct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.customer.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_date)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "", new { /*id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
