@@ -1,0 +1,46 @@
+﻿@model sudoku.Models.User
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+
+<div>
+    <hr />
+    <div class="py-5 row col-md-6 mx-auto card rounded-0 p-5">
+        <h1 class="card-header text-center">Profile</h1>
+        <table class="row w-100 p-5">
+            <tr>
+                <td class="font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Username) :
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Username)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Email) :
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Email)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Role) :
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Role)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        refreshNavbar();
+    </script>
+}
+

@@ -1,0 +1,23 @@
+﻿@model sudoku.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Genius</h1>
+</div>
+
+@section Scripts{
+<script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        var username ="@Model.Username";
+        if (username != "") {
+            window.localStorage.setItem('userId',""+@Model.UserId);
+            window.localStorage.setItem('userName',"@Model.Username");
+            window.localStorage.setItem('userEmail',"@Model.Email");
+            window.localStorage.setItem('userRole', "@Model.Role");
+            
+        }
+        refreshNavbar();
+    </script>
+}
